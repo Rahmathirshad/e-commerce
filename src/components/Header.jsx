@@ -37,9 +37,9 @@ const Header = () => {
 }
 
 const MainHeader = styled.header`
-position: sticky;
+/* position: fixed;
 top: 0;
-z-index: 999;
+z-index: 999; */
 
 .navbar-container{
 display: flex;
@@ -49,7 +49,7 @@ padding: 0 20px;
 height: 9vh;
 width: 100%;
 box-shadow: ${({ theme }) => theme.colors.shadowSupport};
-backdrop-filter: blur(30px);
+backdrop-filter: blur(10px);
 
 .logoANDmenuIcon-container{
     display: flex;

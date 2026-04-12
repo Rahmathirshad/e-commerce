@@ -3,7 +3,7 @@ const FormatPrice = ({ price }) => {
     style: "currency",
     currency: "INR",
     maximumFractionDigits: 2,
-  }).format(price*88.73);
+  }).format(price);//price*88.73
 };
 
 export default FormatPrice;

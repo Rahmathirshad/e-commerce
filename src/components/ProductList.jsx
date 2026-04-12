@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -19,7 +18,7 @@ const ProductList = () => {
     if(status === 'failed') return <p>Failed to load Products</p>
   return (
     <Section>
-      {items.map((item, key) => <NavLink to={`/product/${item.id}`} key={key}>
+      {items.map((item, key) => <NavLink to={`/product/${item._id}`} key={key}>
         <div className="product-card">
           <img className='img' src={item.image} alt="" />
           <h4 className="title">{item.title}</h4>

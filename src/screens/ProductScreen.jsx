@@ -15,7 +15,7 @@ const ProductScreen = () => {
   const { item: product, status } = useSelector((state) => state.product);
   const { items } = useSelector((state) => state.cart);
 
-  let goToCart = items.find((item) => item.id === product.id);
+  let goToCart = items.find((item) => item._id === product.id);
 
   useEffect(() => {
     dispatch(fetchProductDetail(id))
