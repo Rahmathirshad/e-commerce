@@ -15,7 +15,7 @@ const ProductScreen = () => {
   const { item: product, status } = useSelector((state) => state.product);
   const { items } = useSelector((state) => state.cart);
 
-  let goToCart = items.find((item) => item._id === product.id);
+  let goToCart = items.find((item) => item.id === product.id);
 
   useEffect(() => {
     dispatch(fetchProductDetail(id))
@@ -32,7 +32,7 @@ const ProductScreen = () => {
           <h2 className="price"><FormatPrice price={product.price} /></h2>
           <p className="category">Category - {product.category}</p>
           <p className="description">Description - {product.description}</p>
-          <p className="rating">Rating - {product?.rating} | Total Count - {product?.rating + 3}</p>
+          <p className="rating">Rating - {product?.rating?.rate} | Total Count - {product?.rating?.count}</p>
           <div className="btns">
             {!goToCart ? <Button onClick={() => {
               toast("Added Successfully 👍");
